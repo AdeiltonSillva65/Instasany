@@ -1,6 +1,8 @@
+import SectionHero from "@/components/section-hero";
+
 const Page =()=>{
   return(
-    <div>ola, estou funcionando</div>
+    <SectionHero/>
   )
 }
 

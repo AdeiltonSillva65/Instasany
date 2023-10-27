@@ -1,0 +1,2 @@
+tailwind merge - mesclar 
+    npm i tailwind-merge

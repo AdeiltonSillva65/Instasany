@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'green-primary': '#2A4B46' // definindo cores
+        'green-primary': '#1D3531', // definindo cores
+        'green-actived': '#5D8A83'
       },
       maxWidth:{
         grid: '77.5rem'

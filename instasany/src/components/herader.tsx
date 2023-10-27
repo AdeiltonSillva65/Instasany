@@ -6,7 +6,18 @@ import SearchIcon from '../../public/icon-search.svg';
 import IconUser from '../../public/icon-user.svg';
 import GridContainer from "./grid";
 
+const arrayMenu = [
+    'Inicio',
+    'Benefícios',
+    'Para quem é o curso?',
+    'Preços promocionais',
+    'Sobre nós'
+]
+
 const Header =()=>{
+
+    const activedStyled = 'bg-green-actived text-opacity-100 rounded-full'
+
     return (
         <header className="relative w-full h-24 bg-green-primary flex item-center">
             <GridContainer className="flex items-center justify-between">
@@ -14,29 +25,29 @@ const Header =()=>{
                     src={LogoImg}
                     alt='logo'
                 />
-                <div className="flex items-center">
-                    <nav>
-                        <Link href={"#"}>Inicio</Link>
-                        <Link href={"#"}>Benefícios</Link>
-                        <Link href={"#"}>Para quem é o curso?</Link>
-                        <Link href={"#"}>Preços promocionais</Link>
-                        <Link href={"#"}>Sobre nós</Link>
-                    </nav>
-                </div>
-                <div>
-                    <button>
-                        <Image 
-                            src={SearchIcon}
-                            alt='search'
-                        />
-                    </button>
-                    <button>
-                        <Image 
-                            src={IconUser}
-                            alt='icon user'
-                        />
-                        <span>Fazer login</span>
-                    </button>
+                <div className="flex items-center gap-20">
+                        <nav className="flex gap-2">
+                            {
+                                arrayMenu.map((item, index)=>(
+                                <Link key={index} href={"#"} className={`px-3 py-1 text-white text-opacity-40 hover:text-opacity-100 transition-all${index === 0 ? activedStyled: ''}`}>{item}</Link> 
+                                ))
+                            } 
+                        </nav>
+                    <div className="flex items-center gap-6">
+                        <button>
+                            <Image 
+                                src={SearchIcon}
+                                alt='search'
+                            />
+                        </button>
+                        <button className="flex items-center gap-2">
+                            <Image 
+                                src={IconUser}
+                                alt='icon user'
+                            />
+                            <span className="text-white font-medium">Fazer login</span>
+                        </button>
+                    </div>         
                 </div>
             </GridContainer>
         </header>

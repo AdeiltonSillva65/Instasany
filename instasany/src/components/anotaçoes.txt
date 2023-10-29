@@ -1,2 +1,5 @@
 tailwind merge - mesclar 
     npm i tailwind-merge
+    
+Gsap Animations
+    npm i gsap

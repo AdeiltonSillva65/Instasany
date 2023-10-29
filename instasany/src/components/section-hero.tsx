@@ -20,6 +20,8 @@ const SectionHero = ()=>{
 
     useEffect(()=> {
         const textHero = textHeroRef.current 
+        const mLetf = mockupleftRef.current
+        const mRight = mockupRightRef.current 
 
         gsap.fromTo(textHero, {
             opacity: 0,
@@ -29,6 +31,20 @@ const SectionHero = ()=>{
             y: 0,
             duration: 1,
             ease:'Power4.out'
+        })
+
+        gsap.fromTo(mLetf,{
+            rotate:0
+        },{
+            rotate: -10,
+            duration:1 
+        })
+
+        gsap.fromTo(mRight,{
+            rotate:0
+        },{
+            rotate: 10,
+            duration:1
         })
     },[]);
 

@@ -12,16 +12,19 @@ const config: Config = {
         'green-primary': '#1D3531', // definindo cores
         'green-actived': '#5D8A83',
         'green-border': '#2A4B46',
-        'green-btn': '#CCEC60'
+        'green-btn': '#CCEC60',
+        'green-title-card': '#719d96'
       },
       maxWidth:{
         grid: '77.5rem',
         'text-hero': '66rem',
         'area-icons': '855px',
-        'area-mockups':'957px'
+        'area-mockups':'957px',
+        'area-cards': '1320px'
       },
       height: {
-        'section-hero': '874px'
+        'section-hero': '874px',
+        'area-cards': '562px'
       },
       backgroundImage: {
         'hero': "url('/../bg-hero.svg')"
